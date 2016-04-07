@@ -1,5 +1,3 @@
-# kube-aws tool for provisioning a CoreOS/Kubernetes cluster on AWS
-
 # Summary
 
 - A Docker build for the sinopia tool for running a private NPM registry [sinopia](https://github.com/rlidwka/sinopia)
