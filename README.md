@@ -13,11 +13,12 @@
 - Create a local config.yaml config file - for help, see the [sinopia](https://github.com/rlidwka/sinopia/tree/master/conf)
 - Build the image using docker
 ```bash
-$ docker build -t sinopia .
+$ docker build -t npm-registry .
 ```
 - Run the container and expose the ports configured
 ```bash
-$ docker run -v $(pwd):/sinopia/ -e --rm sinopia
+$ docker run -d -v $(pwd):/sinopia/ -p 4873:4873 npm-registry
+$ curl http://localhost:4873/
 ```
 
 # Alternatively, you can use the Docker Hub automated build
