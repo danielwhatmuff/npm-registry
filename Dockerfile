@@ -1,13 +1,16 @@
-FROM node:argon
+FROM node:5
 
 MAINTAINER "Daniel Whatmuff" <danielwhatmuff@gmail.com>
 
-RUN npm install -g sinopia && \
+RUN npm install --loglevel warn -g sinopia && \
     useradd sinopia && \
-    mkdir -p /sinopia
+    mkdir -p /sinopia && \
+    chown sinopia:sinopia /sinopia
+
+USER sinopia
 
 WORKDIR /sinopia
 
-ADD config-example.yaml /sinopia/config-example.yaml
+ADD config.yaml /sinopia/config.yaml
 
 CMD ["sinopia"]

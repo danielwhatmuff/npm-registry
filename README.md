@@ -19,11 +19,5 @@ $ docker run -d -v $(pwd):/sinopia/ -p 4873:4873 npm-registry
 $ curl http://localhost:4873/
 ```
 
-# Alternatively, you can use the Docker Hub automated build
-
-```bash
-$ docker pull danielwhatmuff/sinopia
-```
-
 ### Contributing
 File issues in GitHub to report bugs or issue a pull request to contribute.
